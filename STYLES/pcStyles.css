@@ -1,0 +1,133 @@
+body, html{
+    background-color: #c1c1c1;;
+    background-image: url(../IMAGES/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav {
+    display: block;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    z-index: 10;
+  }
+  .sidenavButton {
+    color: #000000;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #a2cfca, #a6cec9, #aaccc8, #aecbc6, #b2c9c5, #b6c8c4, #bac7c2, #bec5c1, #c2c4c0, #c6c2bf, #cac1be, #cec0bc, #d2bebb, #d6bdba, #dabbb8, #debab7, #e2b9b6, #e6b7b5, #eab6b4, #eeb4b2, #f2b3b1);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-weight: 800;
+    }  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  } 
+  .sidenav a:hover {
+    color: #808080;
+  } 
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .sidenav a.active {
+    color: #747474;
+  }
+  .sidenav a.active:hover {
+    color: #545454;
+  }
+  .HomeHeader {
+    border: hidden;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 780px;
+    padding: 8px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cvheading {
+    text-align: center;
+    color: #632423;
+    font-size: 250%;
+    font-weight: 800;
+  }
+  .HomeHeaderParagraph {
+    text-align: center;
+    background-color: #b2c9c5;
+    color: #632423;
+    font-weight: 800;
+  }
+  .Profile {
+    border-radius: 50%;
+    margin: 10px;
+    max-width: 650px;
+  }
+  .AboutHeader {
+    color: black;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    padding-bottom: 20px;
+  }
+  .AboutHead {
+    padding-top: 5px;
+    padding-left: 25px;
+    font-weight: 800;
+  }
+  .AboutBodyHead {
+    padding-top: 10px;
+    padding-left: 30px;
+    font-weight: 800;
+    font-size: 120%;
+    color: #000000;
+  }
+  .btnCreator {
+    border: hidden;
+    border-radius: 100px;
+    padding: 3%;
+    width: 25%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 90%;
+    background-image: linear-gradient(to bottom right, #f2b3b1, #a2cfca);
+}
+.btnCreator:hover {
+    background-image: linear-gradient(to bottom right, #f2b3b17c, #a2cfca7c);
+    box-shadow: 0 0 3px #3f3f3f;
+    color: #333;
+}

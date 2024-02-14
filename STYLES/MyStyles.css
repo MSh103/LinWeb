@@ -1,0 +1,468 @@
+@media only screen 
+  and (min-device-width: 280px)  { 
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    #projHeader {
+        text-align: center;
+        color: #333;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 80%;
+        width: 50%;
+    }
+    .projLinks {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    nav {
+        display: block;
+        position: sticky;
+        overflow: hidden;
+        top: 0;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        z-index: 10;
+      }
+      .sidenavButton {
+        color: #000000;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to top, #e3e3e3, #626262, #97cbd9);
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 50%;
+        padding-bottom: 60px;
+        font-weight: 800;
+        }  
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        display: block;
+        transition: 0.3s;
+      } 
+      .sidenav a:hover {
+        color: #808080;
+      } 
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .sidenav a.active {
+        color: #747474;
+      }
+      .sidenav a.active:hover {
+        color: #545454;
+      }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        font-size: 12px;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 5px;
+        color: antiquewhite;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 7%;
+        width: 70%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+}
+@media only screen 
+  and (min-device-width: 320px)  { 
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 90%;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 10px;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 6.5%;
+        width: 65%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+}
+@media only screen 
+  and (min-device-width: 375px)  { 
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 90%;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 10px;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 6%;
+        width: 60%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+}
+@media only screen and (min-width: 326px) {
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 90%;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 10px;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 6%;
+        width: 60%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+}
+@media only screen
+  and (min-device-width: 810px) {
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 90%;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 10px;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 5.5%;
+        width: 55%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+  }
+@media only screen 
+  and (min-device-width: 768px)  {
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .mobile {
+        background-color: #626262;;
+        background-image: url(../IMAGES/background3.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .profilePic {
+        border: 2px solid black;
+        border-radius: 50%;
+        max-width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        text-align: center;
+        color: #333;
+        margin-top: 50px;
+        font-size: 120%;
+    }
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-size: 25px;
+        border: outset 2px #333;
+        border-radius: 25px;
+        padding: 15px;
+    }
+    section {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .btnCreator {
+        border: inset 2px #333;
+        border-radius: 100px;
+        padding: 3.5%;
+        width: 55%;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 15px;
+        text-decoration: none;
+        color: antiquewhite;
+        display:block;
+        text-align: center;
+        font-size: 25px;
+        background-color: #333333af;
+    }
+    .btnCreator:hover {
+        background-color: #333333af;
+        box-shadow: 0 0 80px #3f3f3f;
+        color: #fff;
+    }
+}
