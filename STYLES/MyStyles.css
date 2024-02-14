@@ -50,7 +50,7 @@
         z-index: 10;
         top: 0;
         left: 0;
-        background-image: linear-gradient(to top, #e3e3e3, #626262, #97cbd9);
+        background-image: linear-gradient(to top, #e3e3e3, #a6d0e0);
         overflow-x: hidden;
         transition: 0.3s;
         padding-top: 50%;
