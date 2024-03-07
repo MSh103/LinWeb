@@ -103,7 +103,8 @@
         border: outset 2px #333;
         border-radius: 25px;
         padding: 5px;
-        color: antiquewhite;
+        color: #333;
+        background-color: #ffffff95;
     }
     section {
         margin-left: auto;
