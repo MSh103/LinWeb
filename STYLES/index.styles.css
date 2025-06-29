@@ -1,0 +1,370 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .infoDiv h1 {
+        font-size: 1.35rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.86rem !important;
+    }
+}
+
+@media only screen and (max-width: 1010px)
+{
+    .infoDiv h1 {
+        font-size: 1.25rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.66rem !important;
+    }
+}
+
+@media only screen and (max-width: 970px)
+{
+    .infoDiv {
+        width: 90% !important;
+        float: none !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .infoDiv .title { 
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .infoDiv {
+        padding: 1.3rem 2rem !important;
+    }
+    .infoDiv h1 {
+        font-size: 0.8rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.56rem !important;
+        margin-top: 1rem !important;
+    }
+}
+
+.infoDiv {
+    display: block;
+    float: left;
+    gap: 10rem;
+    background: var(--gradient);
+    width: 47%;
+    height: auto;
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+}
+
+.infoDiv:hover {
+    background: var(--gradient-hover);
+    cursor: default;
+}
+
+.infoDiv h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.infoDiv .title {
+    padding-left: 0.5rem;
+}
+
+.infoDiv .font-change {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.infoDiv p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+}
+
+body[lang="ar"] .infoDiv p {
+    line-height: 2.2;
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .profileDiv .titleDiv {
+        font-size: 1.35rem !important;
+    }
+    .profileDiv .imgContainer {
+        width: 16rem !important;
+    }
+    .profileDiv .imgContainer img {
+        width: 16rem !important;
+    }
+}
+
+@media only screen and (max-width: 1010px)
+{
+    .profileDiv .titleDiv {
+        font-size: 1.25rem !important;
+    }
+    .profileDiv .imgContainer {
+        width: 13rem !important;
+    }
+    .profileDiv .imgContainer img {
+        width: 13rem !important;
+    }
+}
+
+@media only screen and (max-width: 970px)
+{
+    .profileDiv {
+        width: 90% !important;
+        float: none !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .profileDiv {
+        width: 90% !important;
+        float: none !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .profileDiv .titleDiv {
+        font-size: 0.8rem !important;
+    }
+    .profileDiv .imgContainer {
+        width: 8rem !important;
+    }
+    .profileDiv .imgContainer img {
+        width: 8rem !important;
+    }
+}
+
+.profileDiv {
+    float: right;
+    width: 47%;
+    height: auto;
+}
+
+.profileDiv .titleDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.profileDiv .imgContainer {
+    width: 21rem;
+    padding-top: 2rem;
+    margin: auto;
+    text-align: center;
+}
+
+.profileDiv .imgContainer img {
+    width: 20rem;
+    height: auto;
+    display: flex;
+    border-radius: 50%;
+}
+
+.SkillSection {
+    display: flex;
+}
+
+.skillsDiv {
+    width: 100%;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+.skills-banner {
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg); /* or var(--bg) */
+    padding: 1rem 0;
+}
+
+.scroll-container {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.skills-strip {
+    display: inline-block;
+    animation: scrollSkills 30s linear infinite;
+}
+
+.skills-strip img {
+    height: 60px;
+    margin: 0 2rem;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.skills-strip img:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes scrollSkills {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+footer {
+    display: flex;
+    background: var(--gradient);
+    width: 100%;
+    padding: 1rem 1.3rem;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    font-size: 1.22rem;
+    justify-content: space-between;
+}
+
+footer div {
+    display: block;
+    gap: 0.2rem;
+}
+
+footer h1 {
+    font-size: 0.8rem;
+    height: 0.8rem;
+}
+
+footer div a {
+    margin-right: 0rem;
+}
+
+footer #title {
+    width: 25%;
+    text-align: center;
+}
+
+footer #title hr {
+    width: 80%;
+    margin: 0.2rem auto;
+}
+
+@media only screen and (max-width: 3440px) {
+    footer h1 {
+        font-size: 0.8rem;
+    }
+    footer #title {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    footer h1 {
+        font-size: 0.65rem;
+    }
+}
+
+@media only screen and (max-width: 1100px)
+{
+    footer h1 {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 1010px)
+{
+}
+
+@media only screen and (max-width: 970px)
+{
+    footer div a i {
+        font-size: 0.8rem;
+    }
+    footer h1 {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 440px)
+{
+    footer h1 {
+        font-size: 0.48rem;
+    }
+    footer div a i {
+        font-size: 0.95rem;
+    }
+}
+
+@media only screen and (max-width: 428px)
+{
+    footer h1 {
+        font-size: 0.48rem;
+    }
+    footer div a i {
+        font-size: 0.95rem;
+    }
+}
+
+@media only screen and (max-width: 420px)
+{
+    footer h1 {
+        font-size: 0.44rem;
+    }
+    footer div a i {
+        font-size: 0.95rem;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    footer h1 {
+        font-size: 0.45rem;
+    }
+    footer div a i {
+        font-size: 0.75rem;
+        height: 0.2rem !important;
+    }
+
+    footer #title {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    footer h1 {
+        font-size: 0.43rem;
+    }
+    footer div a i {
+        font-size: 0.75rem;
+        height: 0.2rem !important;
+    }
+
+    footer #title {
+        width: 35%;
+    }
+}
