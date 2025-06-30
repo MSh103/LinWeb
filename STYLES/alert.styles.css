@@ -1,0 +1,97 @@
+.popup-message {
+  position: fixed;
+  top: 2rem;          /* base top; overridden by JS */
+  right: 2rem;
+  min-width: 25rem;
+  max-width: 25rem;
+  padding: 1rem 2.2rem 1rem 1.2rem;
+  border-radius: 1rem;
+  background: var(--info);
+  color: var(--text);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  
+  /* Keep horizontal transform for slide-in */
+  transform: translateX(20px);
+  transition: 
+    opacity 0.5s ease, 
+    transform 0.5s ease,
+    top 0.5s ease,
+    pointer-events 0s linear 0.5s;
+}
+
+.popup-message.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+/* Remove translateY from move-up, just fade it out smoothly */
+.popup-message.move-up {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+
+/* Other styles remain unchanged */
+.popup-message h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.popup-message h2.en {
+  margin-left: 0.5rem;
+  margin-right: auto;
+}
+
+.popup-message h2.ar {
+  margin-right: 0.5rem;
+  margin-left: auto;
+  font-size: 1.3rem;
+}
+
+.popup-message p {
+  font-size: 0.95rem;
+}
+
+.popup-message p.ar {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+body[lang="ar"] .popup-message {
+  padding: 1rem 1.2rem 1rem 2.2rem !important;
+}
+
+.popup-message .close-popup {
+  font-family: inherit;
+  font-size: 1.25rem;
+  padding: 0.2rem 0.1rem;
+  background: var(--info);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  line-height: 1;
+  position: absolute;
+  border-radius: 0.3rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.close-popup:hover {
+  color: var(--text-muted);
+}
+
+body[lang="en"] .close-popup {
+  right: 1.25rem;
+  left: auto;
+}
+
+/* Arabic button: left side */
+body[lang="ar"] .close-popup {
+  left: 1.25rem;
+  right: auto;
+}

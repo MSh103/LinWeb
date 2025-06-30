@@ -104,6 +104,10 @@ body.light {
   --gradient-hover: linear-gradient(0deg, var(--grad-hover-start), var(--grad-hover-end));
 }
 
+.ar, .en {
+    display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

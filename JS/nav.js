@@ -17,12 +17,13 @@ if (!darkmode) body.classList.add("light");
 // Language (same logic if needed)
 var language = localStorage.getItem("language");
 if (language === null) {
-    localStorage.setItem("language", "true"); // Default: English
-    language = "true";
+    localStorage.setItem("language", "false"); // Default: Arabic
+    language = "false";
 }
 language = language === "true";
 
 if (!language) body.setAttribute("lang", "ar");
+if (language) body.setAttribute("lang", "en");
 
 function toggleView() {
     if (!darkmode) {

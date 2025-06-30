@@ -145,70 +145,13 @@
     }
 
     </style>
-
-
     <script src="JS/nav.js"></script>
-    <script>
-        let debug = false;
-        
-        document.addEventListener("DOMContentLoaded", () => {
-            // Convert to boolean correctly
-            const storedState = localStorage.getItem("popupState");
-            const shouldShowPopup = storedState === null || storedState === "true";
-            
-            if (shouldShowPopup) {
-                document.getElementById('welcomeMessage').classList.add('show');
-            }
-
-            // Assign event to close button
-            window.closePopup = function () {
-                document.getElementById('welcomeMessage').classList.remove('show');
-                localStorage.setItem("popupState", "false");
-            };
-        });
-
-        Stamp = new Date();
-
-        const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-        const FridayMessage = "Friday Message";
-
-        var popup = document.getElementById("fridayPopup");
-        
-        if(weekdays[Stamp.getDay()] == "Friday")
-        {
-            popup.style.display = "block";
-        }
-        
-        function alertMsg()
-        {
-            const dayName = Stamp.getDay();
-            alert("Today is : " + dayName);
-        }
-        function showMsg()
-        {
-            const dayName = weekdays[Stamp.getDay()];
-            alert(FridayMessage);
-        }
-
-        function toggleDebug()
-        {
-            debug = !debug;
-            console.log("Debug mode:", debug);
-            localStorage.setItem("popupState", debug ? "true" : "false");
-        }
-    </script>
-
-    <div id="welcomeMessage" class="popup-message">
-        <button class="close-popup" onclick="closePopup()">&times;</button>
-        <h2 class="en">Welcome to LinWeb!</h2>
-        <h2 class="ar">حياك الله ب <span class="font-change">LinWeb</span></h2>
-        <p class="en">Thank you for visiting my portfolio. Feel free to explore!</p>
-        <p class="ar">نورت الموقع! خذ راحتك وتصفح على كيف كيفك.</p>
-    </div>
-
-    <button onclick="showMsg()">Click Me</button>
+    <script src="JS/alerts.js"></script>
+    
+    <button onclick="alertMsg()">Click Me</button>
+    
     <button onclick="toggleDebug()">Toggle Debug</button>
+    
     <button onclick="toggleLanguage()">Toggle Language</button>
     <button onclick="toggleView()">Toggle Darkmode</button>
 
