@@ -2,8 +2,7 @@
   position: fixed;
   top: 2rem;          /* base top; overridden by JS */
   right: 2rem;
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 25rem;
   padding: 1rem 2.2rem 1rem 1.2rem;
   border-radius: 1rem;
   background: var(--info);
@@ -94,4 +93,13 @@ body[lang="en"] .close-popup {
 body[lang="ar"] .close-popup {
   left: 1.25rem;
   right: auto;
+}
+
+@media only screen and (max-width: 460px) {
+  .popup-message {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important;
+  }
 }

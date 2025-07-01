@@ -119,8 +119,8 @@
 #navWrapper {
     display: flex;
     position: absolute;
-    left: 45%;
-    transform: translateX(-45%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 

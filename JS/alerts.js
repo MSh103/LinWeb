@@ -20,7 +20,7 @@ if(debugStored === null)
 
 function stackPopups() {
     const popups = document.querySelectorAll('.popup-message.show');
-    const gap = 16; // px between popups
+    const gap = -30; // px between popups
     let offset = 32; // initial offset from top in px
 
     popups.forEach((popup, index) => {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Show second popup after 1s delay if needed
-    if (weekdays[Stamp.getDay()] === "Monday" && shouldFriShow) {
+    if (weekdays[Stamp.getDay()] === "Friday" && shouldFriShow) {
         setTimeout(() => {
             popup.classList.add("show");
             stackPopups();
