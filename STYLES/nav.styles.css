@@ -163,7 +163,7 @@
 @media only screen and (max-width: 1010px)
 {
     .navBar {
-        display: flex; /* ✅ allow dropdowns to appear */
+        display: flex; /*  allow dropdowns to appear */
         position: relative; /* needed for absolute children */
         z-index: 10;
         overflow: visible;

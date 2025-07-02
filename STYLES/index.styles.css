@@ -35,15 +35,6 @@ main {
         margin-right: auto;
         margin-left: auto;
     }
-    
-    .infoDiv .title { 
-        display: flex;
-        justify-content: center; 
-        align-items: center;     
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 !important;
-    }
 }
 
 @media only screen and (max-width: 320px)
@@ -73,18 +64,13 @@ main {
     padding: 2rem 3rem;
 }
 
-.infoDiv:hover {
-    background: var(--gradient-hover);
-    cursor: default;
-}
-
 .infoDiv h1 {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
 .infoDiv .title {
-    padding-left: 0.5rem;
+    text-align: center;
 }
 
 .infoDiv .font-change {

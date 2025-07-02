@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const fridayMsg = localStorage.getItem("friMsg");
     let shouldFriShow = fridayMsg === null || fridayMsg === "true";
 
-    // ✅ Force show in debug mode
+    //  Force show in debug mode
     if (debug) {
         shouldShowPopup = true;
         shouldFriShow = true;
@@ -84,7 +84,7 @@ function toggleDebug() {
     console.log("Debug mode:", debug);
 }
 
-// ✅ Set state if debug is true
+//  Set state if debug is true
 if (debug) {
     localStorage.setItem("popupState", "true");
     localStorage.setItem("friMsg", "true");

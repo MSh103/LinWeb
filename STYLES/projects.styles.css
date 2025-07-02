@@ -1,0 +1,283 @@
+main {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    
+}
+.infoDiv {
+    display: block;
+    background: var(--gradient);
+    width: 70%;
+    height: auto;
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoDiv h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.infoDiv .title {
+    text-align: center;
+}
+
+.infoDiv .font-change {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.infoDiv p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    cursor: default;
+}
+
+body[lang="ar"] .infoDiv p {
+    line-height: 2.2;
+}
+
+
+.project {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.project .info {
+    width: 45%;
+    float: left;
+}
+
+.project .info h1 {
+    text-align: center !important;
+    font-size: 1.15rem !important;
+}
+
+.project .info h1.ar {
+    font-size: 1.35rem !important;
+}
+
+.project .info p.ar {
+    font-size: 1.15rem !important;
+}
+
+.project .content {
+    width: 45%;
+    float: right;
+}
+
+.project .content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: default;
+}
+
+.project .content a img {
+    width: 60%;
+    border-radius: 1rem;
+    transition: opacity ease 0.5s;
+}
+
+.project .content a:hover img {
+    opacity: 80%;
+}
+
+.project .content  p {
+    color: var(--text);
+    cursor: default;
+}
+
+.project .content a:hover p {
+    color: var(--text-muted);
+}
+
+.project hr {
+    display: none;
+}
+
+@media only screen and (max-width: 1367px)
+{
+    .infoDiv {
+        width: 90% !important;
+    }
+}
+
+
+@media only screen and (max-width: 1100px)
+{
+    .infoDiv h1 {
+        font-size: 1.35rem !important;
+    }
+    .project .info {
+        width: 40%;
+    }
+    .project .content {
+        width: 40%;
+    }
+    .project .content a{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1010px)
+{
+    .infoDiv h1 {
+        font-size: 1.25rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.8rem !important;
+    }
+    .project .info h1 {
+        font-size: 1rem !important;
+    }
+
+    .project .info h1.ar {
+        font-size: 1.15rem !important;
+    }
+
+    .project .info p.ar {
+        font-size: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 876px)
+{
+    .infoDiv h1 {
+        font-size: 1.25rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.7rem !important;
+    }
+    .project .info h1 {
+        font-size: 0.8rem !important;
+    }
+
+    .project .info h1.ar {
+        font-size: 1rem !important;
+    }
+
+    .project .info p.ar {
+        font-size: 0.9rem !important;
+    }
+    .project .info {
+        width: 40%;
+    }
+    .project .content {
+        width: 40%;
+    }
+    .project .content a{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 730px)
+{
+    .infoDiv h1 {
+        font-size: 1.15rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.6rem !important;
+    }
+    .project .info h1 {
+        font-size: 0.7rem !important;
+    }
+
+    .project .info h1.ar {
+        font-size: 0.9rem !important;
+    }
+
+    .project .info p.ar {
+        font-size: 0.7rem !important;
+    }
+    .project .info {
+        width: 40%;
+    }
+    .project .content {
+        width: 40%;
+    }
+    .project .content a{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 628px)
+{
+    .project .info h1 {
+        font-size: 0.7rem !important;
+    }
+    .project .info h1.ar {
+        font-size: 0.9rem !important;
+    }
+    .project .info p {
+        text-align: center;
+    }
+    .project .info p.ar {
+        font-size: 0.7rem !important;
+    }
+    .project {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .project .info {
+        width: 75%;
+        float: none !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project .content {
+        width: 60%;
+        float: none !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project .content a img {
+        width: 30%;
+    }
+    .project hr {
+        display: flex;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 460px)
+{
+    .project .content a img {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    .project .content a {
+        width: 95%;
+    }
+    .project .content a img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    .project .content a p {
+        font-size: 0.55rem !important;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .infoDiv {
+        width: 100% !important;
+        padding: 2rem 1rem;
+    }
+}

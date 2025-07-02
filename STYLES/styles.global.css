@@ -115,6 +115,10 @@ body.light {
   font-family: 'Courier New', monospace;
 }
 
+p {
+  cursor: default;
+}
+
 body {
   margin: 1rem auto;
   max-width: min(120vw, 1800px);
@@ -246,6 +250,15 @@ header {
   margin: 0.5rem 0;
 }
 
+hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: var(--text-muted);
+  border: none;
+}
+
 .quran {
   font-family: "Saudi";
   line-height: 1.5;
@@ -324,9 +337,6 @@ dialog:focus {
 }
 .success {
   background: var(--success);
-}
-.info {
-  background: var(--info);
 }
 
 
