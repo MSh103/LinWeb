@@ -5,13 +5,6 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 const Stamp = new Date();
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const debugStored = localStorage.getItem("debug");
-if (debugStored === "true") {
-    debug = true;
-} else {
-    debug = false;
-}
-
 if(debugStored === null)
 {
     debug = false;
