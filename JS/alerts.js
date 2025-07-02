@@ -5,12 +5,6 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 const Stamp = new Date();
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-if(debugStored === null)
-{
-    debug = false;
-    localStorage.setItem("debug", "true");
-}
-
 function stackPopups() {
     const popups = document.querySelectorAll('.popup-message.show');
     const gap = -30; // px between popups
