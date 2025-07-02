@@ -1,0 +1,552 @@
+.navBar {
+    display: flex;
+    background: var(--gradient);
+    padding: 1rem 2rem;
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* .navBar:hover {
+    background: var(--gradient-hover);
+} */
+
+@media only screen and (max-width: 430px)
+{
+    /* .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+    .navBar h1 {
+        float: none !important;
+        font-size: 1.2rem !important;
+
+        direction: rtl;
+    }
+
+    #navWrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 428px)
+{
+    /* .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+    .navBar h1 {
+        float: none !important;
+        font-size: 1.2rem !important;
+
+        direction: rtl;
+    }
+
+    #navWrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    /* .navBar {
+        display: flex;
+    } */
+
+    .navBar {
+        padding: 1rem 1.4rem !important;
+    }
+
+    .navBar h1 {
+        float: none !important;
+        font-size: 1rem !important;
+        direction: rtl;
+        margin-left: 0px !important;
+    }
+    
+    #navWrapper {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 360px)
+{
+    /* .navBar {
+        display: flex;
+    } */
+
+    .navBar h1 {
+        float: none !important;
+        font-size: 1.2rem !important;
+
+        direction: rtl;
+    }
+    
+    #navWrapper {
+        display: none;
+    }
+}
+
+
+
+.navBar h1 {
+    font-family: "Saudi";
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+#navWrapper {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.navBar #navWrapper .active {
+    width: auto;
+    height: 2.75rem;
+    border-bottom: 0.35rem solid var(--secondary);
+    text-align: center;
+    padding: 0.65rem;
+    margin-left: 1rem;
+    border-radius: 0.15rem;
+}
+
+.navBar #navWrapper .active:hover {
+    border-bottom: 0.35rem solid var(--text);
+    color: var(--text-muted);
+    cursor: default;
+}
+
+.navBar #navWrapper div {
+    width: auto;
+    height: 2.75rem;
+    border-bottom: 0.35rem solid var(--primary);
+    text-align: center;
+    padding: 0.65rem;
+    margin-left: 1rem;
+    border-radius: 0.15rem;
+}
+
+.navBar #navWrapper div:hover {
+    border-bottom: 0.35rem solid var(--secondary);
+    color: var(--text-muted);
+    cursor: default;
+}
+
+.navBar #dropdownWrapper {
+    display:none;
+}
+
+@media only screen and (max-width: 1010px)
+{
+    .navBar {
+        display: flex; /*  allow dropdowns to appear */
+        position: relative; /* needed for absolute children */
+        z-index: 10;
+        overflow: visible;
+    }
+
+    .navBar #navWrapper {
+        display: none;
+    }
+
+    .navBar #dropdownWrapper {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: default;
+        z-index: 998;
+    }   
+
+    .navBar .dropdown-content {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px) scaleY(0.9);
+        transform-origin: top;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        position: absolute; /* Ensure it's absolutely positioned */
+        top: 100%; /* just below the dropdown button */
+        left: 0;
+        background: var(--gradient);
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+        padding: 0.5rem 0;
+        min-width: 100%; /* or set your desired width */
+        z-index: 998;
+    }
+
+    #dropdownWrapper:hover .dropdown-content,
+    #dropdownWrapper .dropdown-content:hover {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0) scaleY(1);
+    }
+
+
+    #dropdownBtn {
+        width: 4.75rem;
+        border-bottom: 0.35rem solid var(--secondary);
+        border-radius: 0.15rem;
+        transition: border-bottom-color 0.3s ease, color 0.3s ease;
+    }
+    
+    #dropdownBtn p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    #dropdownBtn:hover {
+        border-bottom: 0.35rem solid var(--text);
+        color: var(--text-muted);
+        cursor: pointer;
+    }
+
+    .dropdown-content div {
+        width: 4.75rem;
+        border-bottom: 0.35rem solid var(--primary);
+        text-align: center;
+        border-radius: 0.15rem;
+        display:block;
+        z-index: 998;
+        transition: border-bottom-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dropdown-content p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    .dropdown-content div:hover {
+        border-bottom: 0.35rem solid var(--secondary);
+        color: var(--text-muted);
+        cursor: pointer;
+    }
+
+    .dropdown-content div {
+        padding: 0.5rem 0;
+        cursor: pointer;
+    }
+
+    .navBar .buttonWrapper {
+        right: 10%;
+        transform: translateX(-10%);
+    }
+}
+
+@media only screen and (max-width: 430px)
+{
+    .navBar button {
+        margin-left: 0 !important;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .navBar .icon {
+        width: 1.8rem !important;
+        height: auto !important;
+    }
+
+    .navBar .lang {
+        width: 1rem !important;
+        height: 2rem !important;
+    }
+
+    .navBar .flags-container {
+        width: 2rem !important;
+    }
+
+    .navBar .buttonWrapper {
+        right: 2%;
+        transform: translateX(-2%);
+    }
+}
+
+
+@media only screen and (max-width: 428px)
+{
+    #dropdownWrapper {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: visible;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .navBar button {
+        margin-left: 0 !important;
+        width: 2.2rem !important;
+        height: auto !important;
+    }
+
+    .navBar .lang {
+        width: 3rem !important;
+    }
+
+    .navBar .buttonWrapper {
+        right: 2%;
+        transform: translateX(-2%);
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    #dropdownWrapper {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: visible;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #dropdownBtn {
+        width: 4rem;
+        padding: 0.2rem;
+    }
+    
+    #dropdownBtn p {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-content div {
+        width: 4rem !important;
+        font-size: 0.8rem;
+        padding: 0.2rem;
+    }
+    
+    .dropdown-content p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    .navBar button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.6rem !important;
+        height: 1.6rem !important;
+    }
+
+    .navBar .lang {
+        width: 2.1rem !important;
+        height: 1.4rem !important; /* match button height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .navBar .flag {
+        width: inherit !important;
+    }
+
+    .navBar .icon {
+        stroke: var(--primary);
+        width: 0.9rem !important;
+    }
+
+    .navBar .buttonWrapper {
+        right: 1%;
+        transform: translateX(-1%);
+        gap: 0rem !important;
+        height: 1.8rem !important;
+        width: auto !important;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .navBar {
+        padding: 0.5rem 0.8rem;
+    }
+
+    #dropdownBtn {
+        width: 2.75rem;
+        padding: 0.25rem;
+    }
+    
+    #dropdownBtn p {
+        font-size: 0.6rem;
+    }
+
+    .dropdown-content div {
+        width: 2.75rem !important;
+        font-size: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    .navBar h1 {
+        font-size: 0.9rem !important;
+    }
+
+    .navBar .lang {
+        width: 1.9rem !important;
+    }
+
+    .navBar button {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+
+    .navBar .buttonWrapper {
+        right: 0.7%;
+        transform: translateX(-0.7%);
+        gap: 0rem !important;
+        height: 1.8rem !important;
+        width: auto !important;
+    }
+}
+
+.navBar .icon {
+    stroke: var(--primary);
+    width: 2rem;
+}
+
+.navBar button:hover .icon {
+    stroke: var(--text);
+}
+
+.navBar button {
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.navBar button:hover {
+    cursor: default;
+}
+
+.navBar .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 0.2rem;
+    margin-left: auto; /* Pushes it to the right */
+    gap: 0.5rem; /* Optional: space between buttons */
+}
+
+.navBar .lang {
+    width: 4rem;
+    height: 2.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar .flags-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.navBar .flag {
+    width: auto;
+    height: 2rem; /* Fixed height for both flags */
+    max-width: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+#Saudi {
+    display: none;
+    max-width: 2.45rem;
+}
+
+#american {
+    display: none;
+    max-width: 2.55rem; /* Ensure the American flag doesn't exceed container width */
+}
+
+.ar {
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+
+body[lang="ar"] .ar {
+    font-family: "Saudi";
+    display: inherit;
+}
+
+body[lang="ar"] .en {
+    display: none;
+}
+
+body[lang="en"] .en {
+    display: inherit;
+}
+
+body[lang="en"] .ar {
+    display: none;
+}
+
+
+body[lang="ar"] #american {
+    display: flex;
+}
+
+body[lang="ar"] #Saudi {
+    display: none;
+}
+
+body[lang="en"] #Saudi {
+    display: flex;
+}
+
+body[lang="en"] #american {
+    display: none;
+}
+
+.navBar h1:hover {
+    color: var(--highlight);
+}
+
+.navBar h1,
+.navBar #navWrapper div,
+.navBar button,
+.navBar .icon,
+.navBar .flag {
+    transition: all 0.2s ease-in-out 0.05s; /* ✨ duration + delay */
+}

@@ -1,0 +1,383 @@
+@font-face {
+    font-family: "Saudi";
+    src: url("fonts/SaudiWeb-Bold.woff2") format("woff2"),
+         url("fonts/SaudiWeb-Bold.woff") format("woff"),
+         url("fonts/Saudi-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal; 
+}
+
+@font-face {
+    font-family: "Saudi";
+    src: url("fonts/SaudiWeb-Regular.woff2") format("woff2"),
+         url("fonts/SaudiWeb-Regular.woff") format("woff"),
+         url("fonts/Saudi-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+
+:root {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(224 0% 1%);
+  --bg: hsl(224 0% 4%);
+  --bg-light: hsl(224 0% 9%);
+  --text: hsl(224 0% 95%);
+  --text-muted: hsl(224 0% 69%);
+  --highlight: hsl(224 0% 39%);
+  --border: hsl(224 0% 28%);
+  --border-muted: hsl(224 0% 18%);
+  --primary: hsl(16 69% 71%);
+  --secondary: hsl(194 65% 62%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0 40);
+  --bg: oklch(0.15 0 40);
+  --bg-light: oklch(0.2 0 40);
+  --text: oklch(0.96 0 40);
+  --text-muted: oklch(0.76 0 40);
+  --highlight: oklch(0.5 0 40);
+  --border: oklch(0.4 0 40);
+  --border-muted: oklch(0.3 0 40);
+  --border-card: solid 1px var(--bg);
+  --primary: oklch(0.76 0.1 40);
+  --secondary: oklch(0.76 0.1 220);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+  
+  --grad-start: var(--bg);
+  --grad-end: var(--bg-light);
+
+  --grad-hover-start: var(--bg);
+  --grad-hover-end: var(--bg-light);
+  
+  --gradient: linear-gradient(0deg, var(--grad-start) 97%, var(--grad-end));
+  --gradient-hover: linear-gradient(0deg, var(--grad-hover-start), var(--grad-hover-end));
+}
+
+body.light {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(224 0% 90%);
+  --bg: hsl(224 0% 95%);
+  --bg-light: hsl(224 100% 100%);
+  --text: hsl(224 0% 4%);
+  --text-muted: hsl(224 0% 28%);
+  --highlight: hsl(224 100% 100%);
+  --border: hsl(224 0% 50%);
+  --border-muted: hsl(224 0% 62%);
+  --primary: hsl(16 65% 27%);
+  --secondary: hsl(190 100% 13%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+  /* oklch */
+  --bg-dark: oklch(0.92 0 40);
+  --bg: oklch(0.96 0 40);
+  --bg-light: oklch(1 0 40);
+  --text: oklch(0.15 0 40);
+  --text-muted: oklch(0.4 0 40);
+  --highlight: oklch(1 0 40);
+  --border: oklch(0.6 0 40);
+  --border-muted: oklch(0.7 0 40);
+  --border-card: solid 1px var(--bg);
+  --primary: oklch(0.4 0.1 40);
+  --secondary: oklch(0.4 0.1 220);
+  --danger: oklch(0.5 0.05 30);
+  --warning: oklch(0.5 0.05 100);
+  --success: oklch(0.5 0.05 160);
+  --info: oklch(0.5 0.05 260);
+
+  --grad-start: var(--bg);
+  --grad-end: var(--bg-light);
+
+  --grad-hover-start: var(--bg);
+  --grad-hover-end: var(--bg-light);
+  
+  --gradient: linear-gradient(0deg, var(--grad-start) 97%, var(--grad-end));
+  --gradient-hover: linear-gradient(0deg, var(--grad-hover-start), var(--grad-hover-end));
+}
+
+.ar, .en {
+    display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+}
+
+p {
+  cursor: default;
+}
+
+body {
+  margin: 1rem auto;
+  max-width: min(120vw, 1800px);
+  background: var(--bg-dark);
+  color: var(--text-muted);
+}
+
+@media only screen and (max-width: 3440px) {
+  body {
+    max-width: min(120vw, 1800px);
+  }
+}
+@media only screen and (max-width: 1920px)
+{
+  body {
+    max-width: min(100vw, 1400px);
+  }
+}
+
+@media only screen and (max-width: 1536px)
+{
+  body {
+    max-width: min(90vw, 1200px);
+  }
+}
+
+@media only screen and (max-width: 1366px)
+{
+  body {
+    max-width: min(90vw, 1000px);
+  }
+}
+
+@media only screen and (max-width: 460px)
+{
+  body {
+    max-width: min(90vw, 450px);
+  }
+}
+
+@media only screen and (max-width: 428px)
+{
+  body {
+    max-width: min(90vw, 400px);
+  }
+}
+
+@media only screen and (max-width: 390px)
+{
+  body {
+    max-width: min(80vw, 370px);
+  }
+}
+
+@media only screen and (max-width: 360px)
+{
+  body {
+    max-width: min(80vw, 340px);
+  }
+}
+
+h1 {
+  font: var(--h1);
+  color: var(--text);
+}
+h1 { cursor: default; }
+h2 { cursor: default; }
+h3 { cursor: default; }
+h4 { cursor: default; }
+h2 {
+  font: var(--h2);
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+h3 {
+  font: var(--h3);
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+h4 {
+  font: var(--h4);
+  margin-bottom: 0.5rem;
+}
+p {
+  font: var(--p);
+}
+
+.small,
+small {
+  font: var(--small);
+}
+
+button {
+  background: var(--bg-light);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font: var(--p);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border: var(--border-card);
+  border-top: solid 1px var(--highlight);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+.card:hover {
+  background: var(--gradient-hover);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0.5rem 0;
+}
+
+hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: var(--text-muted);
+  border: none;
+}
+
+.quran {
+  font-family: "Saudi";
+  line-height: 1.5;
+  direction: rtl;
+}
+
+/* cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--gradient);
+  padding: 1rem 2rem;
+  border: var(--border-card);
+  border-top: 1px solid var(--highlight);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* modals */
+dialog {
+  background: transparent;
+  color: var(--text-muted);
+  margin: 2rem auto;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+
+dialog::backdrop {
+  background: oklch(0 0 0 / 0.7);
+}
+
+dialog:focus {
+  outline: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  background: var(--bg);
+  border: none;
+  box-shadow: none;
+}
+
+.close-modal:hover {
+  background: var(--bg-light);
+}
+
+.border {
+  background: var(--border);
+}
+.border-muted {
+  background: var(--border-muted);
+}
+.highlight {
+  background: var(--highlight);
+}
+.primary {
+  background: var(--primary);
+}
+.secondary {
+  background: var(--secondary);
+}
+.danger {
+  background: var(--danger);
+}
+.warning {
+  background: var(--warning);
+}
+.success {
+  background: var(--success);
+}
+
+
+/* alerts */
+.alert {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg);
+  color: var(--bg);
+  margin-bottom: 1rem;
+  width: min(720px, 100%);
+}
+.alert-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.danger-alert {
+  background: var(--danger);
+}
+.warning-alert {
+  background: var(--warning);
+}
+.success-alert {
+  background: var(--success);
+}
+.info-alert {
+  background: var(--info);
+}
+.alert h5 {
+  color: var(--bg);
+}
+.alert-heading svg {
+  stroke: var(--bg);
+  margin-bottom: 0.5rem;
+}
+
+/* footer */
+footer {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  text-align: right;
+}

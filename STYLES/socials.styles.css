@@ -1,0 +1,195 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .infoDiv h1 {
+        font-size: 1.35rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.86rem !important;
+    }
+}
+
+@media only screen and (max-width: 1010px)
+{
+    .infoDiv h1 {
+        font-size: 1.25rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.66rem !important;
+    }
+}
+
+@media only screen and (max-width: 970px)
+{
+}
+
+@media only screen and (max-width: 730px)
+{
+    main {
+        flex-wrap: wrap !important;
+    }
+    .infoDiv {
+        float: none !important;
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .infoDiv {
+        padding: 1.3rem 2rem !important;
+    }
+    .infoDiv h1 {
+        font-size: 0.8rem !important;
+    }
+    .infoDiv p {
+        font-size: 0.56rem !important;
+        margin-top: 1rem !important;
+    }
+}
+
+.infoDiv {
+    display: block;
+    float: left;
+    gap: 10rem;
+    background: var(--gradient);
+    width: 47%;
+    height: auto;
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+}
+
+.infoDiv h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.infoDiv .title {
+    text-align: center;
+}
+
+.infoDiv .font-change {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.infoDiv p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+}
+
+body[lang="ar"] .infoDiv p {
+    line-height: 2.2;
+}
+
+.socialsDiv {
+    float: right;
+    width: 47%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--text);
+    padding: 2rem 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialsDiv a {
+    background: var(--gradient);
+    border: var(--border-card);
+    border-top: 1px solid var(--highlight);
+    border-bottom: 2px solid var(--primary);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    width: 18rem;
+    height: 5.5rem;
+    transition: border-bottom-color 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+body[lang="ar"] .socialsDiv a
+{
+    direction: rtl;
+}
+
+.socialsDiv a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.socialsDiv a img {
+    height: 1.5rem;
+    width: auto;
+}
+
+.socialsDiv a span {
+    float: right;
+    font-size: 1.13rem;
+}
+
+body[lang="ar"] .socialsDiv a span {
+    float: left;
+}
+
+.socialsDiv a:hover {
+    background: var(--gradient-hover);
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--secondary);
+}
+
+
+@media only screen and (max-width: 730px)
+{
+    .socialsDiv a {
+        width: 21rem !important;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    .socialsDiv a {
+        width: 16rem !important;
+        height: 4.5rem;
+        padding: 1.5rem 2.5rem;
+    }
+    .socialsDiv a span {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 360px)
+{
+    .socialsDiv a {
+        width: 15rem !important;
+        height: 4rem !important;
+        padding: 1rem 2rem;
+    }
+    .socialsDiv a span {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .socialsDiv a {
+        width: 13rem !important;
+        height: 3rem !important;
+        padding: 0.8rem 1.6rem;
+    }
+    .socialsDiv a span {
+        font-size: 0.7rem;
+    }
+}
