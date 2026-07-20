@@ -16,13 +16,13 @@ function Socials()
                 <>
                         <div className='flex flex-wrap flex-col'>
                                 <Container>
-                                        <SectionTitle title={socials[0].title}/>
-                                        <Paragraphs paragraphs={socials[0].paragraphs}/>
+                                        <SectionTitle title={socials.title}/>
+                                        <Paragraphs paragraphs={socials.paragraphs}/>
                                 </Container>
                                 <ClearContainer>
                                         <div className='flex flex-wrap flex-row gap-5 py-4 justify-center'>
                                                 {
-                                                        socials[1].links.map((link, i) => {return(
+                                                        socials.links.map((link, i) => {return(
                                                                 <LinkCard key={i} name={link.name} href={link.href} icon={link.icon} isImg={link.isImg} color={link.color}/>
                                                         );})
                                                 }

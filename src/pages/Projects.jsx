@@ -14,10 +14,10 @@ function Projects()
                 <>
                         <div className='flex flex-col flex-wrap'>
                                 <Container>
-                                        <SectionTitle title={projects[0].title}/>
+                                        <SectionTitle title={projects.title}/>
                                         {
-                                                projects[0].projects.map((project, i) =>{return(
-                                                        <React.Fragment>
+                                                projects.projects.map((project, i) =>{return(
+                                                        <React.Fragment key={i}>
                                                                 <ProjectCard title={project.title} paragraphs={project.paragraphs} src={project.src} name={project.name} href={project.href}/>
                                                         </React.Fragment>
                                                 );})

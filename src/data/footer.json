@@ -1,24 +1,20 @@
-[
-        {
-                "copyright": "2026 © Mohammad Shaikh"
-        },
-        {
-                "buttons": [
-                        {
-                                "icon": "fa-solid fa-envelope",
-                                "href": "mailto:mohammad@oshaikh.sa",
-                                "color": "amber-500"
-                        },
-                        {
-                                "icon": "fa-brands fa-github",  
-                                "href": "https://github.com/MSh103",
-                                "color": "amber-500"
-                        },
-                        {
-                                "icon": "fa-brands fa-linkedin",  
-                                "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSlY2wK6%2FS2GzkpNDjjjsJQ%3D%3D",
-                                "color": "blue-900"
-                        }
-                ]
-        }
-]
+{
+        "copyright": "2026 © Mohammad Shaikh",
+        "buttons": [
+                {
+                        "icon": "fa-solid fa-envelope",
+                        "href": "mailto:mohammad@oshaikh.sa",
+                        "color": "amber-500"
+                },
+                {
+                        "icon": "fa-brands fa-github",  
+                        "href": "https://github.com/MSh103",
+                        "color": "amber-500"
+                },
+                {
+                        "icon": "fa-brands fa-linkedin",  
+                        "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSlY2wK6%2FS2GzkpNDjjjsJQ%3D%3D",
+                        "color": "blue-900"
+                }
+        ]
+}

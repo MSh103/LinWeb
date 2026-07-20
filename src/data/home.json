@@ -1,5 +1,5 @@
-[
-        {
+{
+        "about": {
                 "title": "Welcome to LinWeb",
                 "paragraphs": [
                         "My name is Mohammad Shaikh (Also known as M Sh). I'm a self-taught hobby programmer with a passion for coding. While I'm not enrolled in any university, I enjoy learning and building projects. I'm currently diving deep into C++ for game development, but I also work as a full-stack developer for both games and websites.",
@@ -8,12 +8,12 @@
                         "You can contact me at: msh574965@gmail.com."
                 ]
         },
-        {
+        "hero": {
                 "title": "FullStack | Game | Web Developer",
                 "imgSrc": "assets/icons/maskable-icon.png",
                 "alt": "M Sh's Profile Picture"
         },
-        {
+        "skills": {
                 "title": "My Skills",
                 "skills": [
                         {"name": "Arduino",             "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"},
@@ -37,4 +37,4 @@
                         {"name": "OpenGL",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg"}
                 ]
         }
-]
+}

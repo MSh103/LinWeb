@@ -3,42 +3,16 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../../index.css'
 
-function NavButton({href="/", title="Home", active=false})
+function NavButton({href="/", title="Home", active=false, setOpen})
 {
 return(<>
                 {active ? 
                 <Link to={href} className="
-                        w-auto 
-                        h-[2.75rem] 
-                        text-center 
-                        p-[0.65rem]
-                        border-b-[0.35rem]
-                        border-[var(--secondary)]
-                        rounded-[0.25rem]
-                        mx-1
-                        hover:border-[var(--primary)]
-                        hover:text-[var(--text)]
-                        transition
-                        duration-300
-                        my-auto
-                        font-bold
-                ">{title}</Link> :                 
+                        block text-2xl my-4 font-bold transition duration-300 text-[var(--secondary)] hover:text-[var(--text-muted)]
+                " onClick={() => setOpen(false)}>{title}</Link> :                 
                 <Link to={href} className="
-                        w-auto 
-                        h-[2.75rem] 
-                        text-center 
-                        p-[0.65rem]
-                        border-b-[0.35rem]
-                        border-[var(--primary)]
-                        rounded-[0.25rem]
-                        mx-1
-                        hover:border-[var(--text)]
-                        hover:text-[var(--text)]
-                        transition
-                        duration-300
-                        my-auto
-                        font-bold
-                ">{title}</Link>}
+                        block text-2xl my-4 font-normal transition duration-300 text-[var(--text)] hover:text-[var(--secondary)]
+                " onClick={() => setOpen(false)}>{title}</Link>}
         </>);
 }
 
@@ -54,8 +28,91 @@ function ThemeButton({ state = false, setState })
                         transition
                         duration-300
                 ">      
-                        <i className="fa-solid fa-power-off fa-lg"></i>
+                        <i className="fa-solid fa-power-off fa-md"></i>
                 </button>
+        );
+}
+
+function Burger({ open = false }) {
+  const barColor = open ? 'var(--primary)' : undefined; // red-500 when open, otherwise let CSS classes handle it
+
+  return (
+    <div className="group flex flex-col gap-1.5 w-6 h-6 relative align-middle">
+      <span
+        className="block w-6 h-0.5 bg-[var(--text-muted)] group-hover:bg-[var(--text)] transition-[transform,background-color] duration-300 ease-in-out"
+        style={{
+          transform: open
+            ? 'translateY(8px) rotate(45deg)'
+            : 'translateY(0) rotate(0deg)',
+          backgroundColor: barColor,
+        }}
+      ></span>
+      <span
+        className="block w-6 h-0.5 bg-[var(--text-muted)] group-hover:bg-[var(--text)] transition-[opacity,background-color] duration-200 ease-in-out"
+        style={{ opacity: open ? 0 : 1, backgroundColor: barColor }}
+      ></span>
+      <span
+        className="block w-6 h-0.5 bg-[var(--text-muted)] group-hover:bg-[var(--text)] transition-[transform,background-color] duration-300 ease-in-out"
+        style={{
+          transform: open
+            ? 'translateY(-8px) rotate(-45deg)'
+            : 'translateY(0) rotate(0deg)',
+          backgroundColor: barColor,
+        }}
+      ></span>
+    </div>
+  );
+}
+
+function NavOverlay()
+{
+        const location = useLocation();
+        const [isOpen, setIsOpen] = useState(false);
+
+        useEffect(() => {
+                if (isOpen) {
+                        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                        document.body.style.overflow = 'hidden';
+                        document.body.style.paddingRight = `${scrollbarWidth}px`;
+                } else {
+                        document.body.style.overflow = '';
+                        document.body.style.paddingRight = '';
+                }
+                return () => {
+                        document.body.style.overflow = '';
+                        document.body.style.paddingRight = '';
+                };    
+        }, [isOpen]);
+
+        return(
+                <>
+                        <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className="flex justify-center items-center relative z-50 px-1"
+                                aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                                aria-expanded={isOpen}
+                        >
+                                <div className="text-xl">
+                                        <Burger open={isOpen} />
+                                </div>
+                        </button>
+
+                        <div
+                                className={`fixed inset-0 z-40 flex flex-col items-baseline justify-items-start transition-opacity duration-300 ease-in-out ${
+                                        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                                }`}
+                                style={{ background: 'var(--bg-dark)' }}
+                        >
+                                {/* nav links go here */}
+                                <div className='
+                                        my-8 mx-2 py-8 px-8
+                                '>
+                                        <NavButton setOpen={setIsOpen} href="/" title='Home' active={location.pathname === '/' ? true : false}/>
+                                        <NavButton setOpen={setIsOpen} href="/Socials" title='Socials' active={location.pathname === '/Socials' ? true : false}/>
+                                        <NavButton setOpen={setIsOpen} href="/Projects" title='Projects' active={location.pathname === '/Projects' ? true : false}/>
+                                </div>
+                        </div>
+                </>
         );
 }
 
@@ -83,12 +140,11 @@ function Navbar()
                                 shadow-[var(--shadow)]
                                 shadow-lg
                                 overflow-hidden
-                                justify-center
-                                align-middle
                         ">
-                                <div className="w-[3rem] my-auto">
+                                <div className="my-auto mr-auto">
                                         <h1 className="
-                                                text-2xl
+                                                text-lg
+                                                md:text-2xl
                                                 my-auto
                                                 font-saudi
                                                 hover:text-[var(--bg-dark)]
@@ -97,35 +153,14 @@ function Navbar()
                                                 text-nowrap
                                         "><Link className='cursor-default' to="/">محمد شيخ</Link></h1>
                                 </div>
-       
-                                <div className="
-                                        m-auto
-                                        w-fit
-                                ">
-                                        <NavButton
-                                                href="/"
-                                                title="Home"  
-                                                active={location.pathname === "/" ? true : false}
-                                        />
 
-                                        <NavButton
-                                                href="/Socials"
-                                                title="Socials"  
-                                                active={location.pathname === "/Socials" ? true : false}
-                                        />
-
-                                        <NavButton
-                                                href="/Projects"
-                                                title="Projects"  
-                                                active={location.pathname === "/Projects" ? true : false}
-                                        />
-                                </div>
-       
-                                <div className="w-[3rem]">
+                                <div className='my-auto'>
                                         <ThemeButton state={dark} setState={setDark}/>
                                 </div>
-                                       
-                                {/* <button className="bg-[var(--bg-dark)] p-1 hover:bg-[var(--bg-light)]" onClick={() => setDark(!dark)}>{dark ? "Light" : "Dark"}</button> */}
+
+                                <div className='my-auto'>
+                                        <NavOverlay/>
+                                </div>                        
                         </div>
                 </nav>
         );
