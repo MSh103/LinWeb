@@ -7,7 +7,7 @@
                                 "paragraphs": [
                                         "I made this portfolio using Vite+React with Tailwindcss for styling."
                                 ],
-                                "src": "https://linweb.dev/IMAGES/maskable-icon.png",
+                                "src": "/assets/icons/maskable-icon.png",
                                 "name": "M Sh's Portfolio",
                                 "href": "https://www.linweb.dev"
                         },
@@ -25,7 +25,7 @@
                                 "paragraphs": [
                                         "Foo-1334tba-fun.com, is supposed to resemble Footballfun.com. It was a prank my friend and I thought of during school."
                                 ],
-                                "src": "/images/rickroll-roll.gif",
+                                "src": "/assets/images/rickroll-roll.gif",
                                 "name": "Rick Roll",
                                 "href": "https://foo-1334tba-fun.netlify.app/"
                         },
@@ -34,7 +34,7 @@
                                 "paragraphs": [
                                         "This was a school assignment from DigiChamps Level 10. After that, the teacher used it as a reference for other students. It is flooding with flaws."
                                 ],
-                                "src": "/images/wormwrangler.png",
+                                "src": "/assets/images/wormwrangler.png",
                                 "name": "Worm Wrangler",
                                 "href": "https://worm-wrangler.netlify.app/"
                         },

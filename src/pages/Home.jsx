@@ -4,7 +4,7 @@ import Card from '../components/common/Card';
 import ClearCard from '../components/common/ClearCard';
 
 import SectionTitle from '../components/common/SectionTitle';
-import SectionBody from '../components/common/SectionBody';
+import Paragraphs from '../components/common/Paragraphs';
 
 import home from '../data/home.json'
 
@@ -15,7 +15,7 @@ function Home()
                         <div className='flex flex-wrap flex-row gap-[6%] md:flex-row'>
                                 <Card>
                                         <SectionTitle title={home[0].title}/>
-                                        <SectionBody paragraphs={home[0].paragraphs}/>
+                                        <Paragraphs paragraphs={home[0].paragraphs}/>
                                 </Card>
                                 <ClearCard>
                                         <SectionTitle title={home[1].title}/>

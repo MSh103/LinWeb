@@ -4,7 +4,7 @@ import Container from '../components/layout/Container';
 import ClearContainer from '../components/layout/ClearContainer';
 
 import SectionTitle from '../components/common/SectionTitle';
-import SectionBody from '../components/common/SectionBody';
+import Paragraphs from '../components/common/Paragraphs.jsx';
 
 import LinkCard from '../components/common/LinkCard.jsx';
 
@@ -17,7 +17,7 @@ function Socials()
                         <div className='flex flex-wrap flex-col'>
                                 <Container>
                                         <SectionTitle title={socials[0].title}/>
-                                        <SectionBody paragraphs={socials[0].paragraphs}/>
+                                        <Paragraphs paragraphs={socials[0].paragraphs}/>
                                 </Container>
                                 <ClearContainer>
                                         <div className='flex flex-wrap flex-row gap-5 py-4 justify-center'>
