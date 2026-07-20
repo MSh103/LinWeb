@@ -1,0 +1,61 @@
+[
+        {
+                "title": "My Projects",
+                "projects": [
+                        {
+                                "title": "My Portfolio",
+                                "paragraphs": [
+                                        "I made this portfolio using Vite+React with Tailwindcss for styling."
+                                ],
+                                "src": "https://linweb.dev/IMAGES/maskable-icon.png",
+                                "name": "M Sh's Portfolio",
+                                "href": "https://www.linweb.dev"
+                        },
+                        {
+                                "title": "Osama Shaikh's Portfolio",
+                                "paragraphs": [
+                                        "This is my father's, Osama Shaikh, portfolio website. I built it myself, it was my very first project."
+                                ],
+                                "src": "https://oshaikh.sa/IMAGES/maskable-icon.png",
+                                "name": "Osama's Portfolio",
+                                "href": "https://www.oshaikh.sa"
+                        },
+                        {
+                                "title": "Foo-1334tba-fun.com",
+                                "paragraphs": [
+                                        "Foo-1334tba-fun.com, is supposed to resemble Footballfun.com. It was a prank my friend and I thought of during school."
+                                ],
+                                "src": "/images/rickroll-roll.gif",
+                                "name": "Rick Roll",
+                                "href": "https://foo-1334tba-fun.netlify.app/"
+                        },
+                        {
+                                "title": "Worm-Wrangler",
+                                "paragraphs": [
+                                        "This was a school assignment from DigiChamps Level 10. After that, the teacher used it as a reference for other students. It is flooding with flaws."
+                                ],
+                                "src": "/images/wormwrangler.png",
+                                "name": "Worm Wrangler",
+                                "href": "https://worm-wrangler.netlify.app/"
+                        },
+                        {
+                                "title": "Custom Saudi Police Skins For Crown Vic",
+                                "paragraphs": [
+                                        "This is my first mod ever (PUBLISHED). This mod is a skin for Maxxie's Crown Vic in BeamNG.Drive. It consists of Saudi Police Liveries."
+                                ],
+                                "src": "https://beamng.com/data/resource_icons/34/34828.jpg?1749342529",
+                                "name": "Saudi Police Mod",
+                                "href": "https://beamng.com/resources/custom-saudi-police-skins-for-crown-vic-%D8%B4%D8%B1%D8%B7%D8%A9-%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.34828/"
+                        },
+                        {
+                                "title": "Saudi Emergency Sirens Preset Mod",
+                                "paragraphs": [
+                                        "This Mod is a sound preset for the \"Improved sirens\" mod by 'jojo38'."
+                                ],
+                                "src": "https://beamng.com/data/resource_icons/34/34889.jpg?1749933439",
+                                "name": "Saudi Sirens Mod",
+                                "href": "https://beamng.com/resources/saudi-emergency-sirens-preset-%D8%B3%D9%81%D8%AA%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A.34889/"
+                        }
+                ]
+        }
+]
