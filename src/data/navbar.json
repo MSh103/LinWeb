@@ -2,19 +2,19 @@
         "title": "محمد شيخ",
         "buttons": [
                 {
-                        "icon": "fa-solid fa-envelope fa-xl",
+                        "icon": "fa-solid fa-envelope fa-2xl",
                         "href": "mailto:mohammad@oshaikh.sa",
                         "color": "text-black",
                         "darkColor": "text-slate-50"
                 },
                 {
-                        "icon": "fa-brands fa-github fa-xl",  
+                        "icon": "fa-brands fa-github fa-2xl",  
                         "href": "https://github.com/MSh103",
                         "color": "text-black",
                         "darkColor": "text-slate-50"
                 },
                 {
-                        "icon": "fa-brands fa-linkedin fa-xl",  
+                        "icon": "fa-brands fa-linkedin fa-2xl",  
                         "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSlY2wK6%2FS2GzkpNDjjjsJQ%3D%3D",
                         "color": "text-blue-900",
                         "darkColor": "text-blue-900"

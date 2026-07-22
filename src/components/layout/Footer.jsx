@@ -20,7 +20,7 @@ function Footer()
                                 <div className='ml-auto flex text-xl my-auto'>
                                         {footer.buttons.map((button, index) => {return(
                                                 <a href={button.href} key={index}>
-                                                        <i className={`${button.icon} ${dark ? button.darkColor : button.color} hover:text-[var(--primary)] font-extrabold`}></i>
+                                                        <i className={`${button.icon} ${dark ? button.darkColor : button.color} hover:text-[var(--text-muted)] font-extrabold`}></i>
                                                 </a>
                                         );})}
                                 </div>

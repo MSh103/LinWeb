@@ -121,10 +121,10 @@ function NavOverlay({dark=false})
                                         <NavButton setOpen={setIsOpen} href="/Socials" title='Socials' active={location.pathname === '/Socials' ? true : false}/>
                                         <NavButton setOpen={setIsOpen} href="/Projects" title='Projects' active={location.pathname === '/Projects' ? true : false}/>
                                 </div>
-                                <div className='mt-auto mb-10 px-8'>
+                                <div className='mt-auto mb-10 px-6'>
                                         {navBar.buttons.map((button, index) => {return(
-                                                <a href={button.href} key={index}>
-                                                        <i className={`${button.icon} hover:text-[var(--primary)] font-extrabold ${dark ? button.darkColor : button.color}`}></i>
+                                                <a href={button.href} key={index} className='p-0 mx-1'>
+                                                        <i className={`${button.icon} hover:text-[var(--text-muted)] font-extrabold ${dark ? button.darkColor : button.color}`}></i>
                                                 </a>
                                         );})}
                                 </div>
