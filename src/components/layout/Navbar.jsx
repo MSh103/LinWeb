@@ -1,7 +1,12 @@
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 import '../../index.css'
+import navBar from '../../data/navbar.json'
+
+
+import Container from './Container';
 
 function NavButton({href="/", title="Home", active=false, setOpen})
 {
@@ -64,7 +69,7 @@ function Burger({ open = false }) {
   );
 }
 
-function NavOverlay()
+function NavOverlay({dark=false})
 {
         const location = useLocation();
         const [isOpen, setIsOpen] = useState(false);
@@ -101,15 +106,22 @@ function NavOverlay()
                                 className={`fixed inset-0 z-40 flex flex-col items-baseline justify-items-start transition-opacity duration-300 ease-in-out ${
                                         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
                                 }`}
-                                style={{ background: 'var(--bg-dark)' }}
+                                style={{ background: 'var(--bg)' }}
                         >
                                 {/* nav links go here */}
                                 <div className='
-                                        my-8 mx-2 py-8 px-8
+                                        my-8 mx-2 py-8 px-8 md:mx-32 md:my-4
                                 '>
                                         <NavButton setOpen={setIsOpen} href="/" title='Home' active={location.pathname === '/' ? true : false}/>
                                         <NavButton setOpen={setIsOpen} href="/Socials" title='Socials' active={location.pathname === '/Socials' ? true : false}/>
                                         <NavButton setOpen={setIsOpen} href="/Projects" title='Projects' active={location.pathname === '/Projects' ? true : false}/>
+                                </div>
+                                <div className='mt-auto mb-10 px-8'>
+                                        {navBar.buttons.map((button, index) => {return(
+                                                <a href={button.href} key={index}>
+                                                        <i className={`${button.icon} hover:text-[var(--primary)] font-extrabold ${dark ? button.darkColor : button.color}`}></i>
+                                                </a>
+                                        );})}
                                 </div>
                         </div>
                 </>
@@ -119,28 +131,11 @@ function NavOverlay()
 function Navbar()
 {
         const location = useLocation();
-        const [dark, setDark] = useState(false);
-       
-        useEffect(() => {
-                document.documentElement.classList.toggle("dark", dark);
-                document.documentElement.classList.toggle("light", !dark);
-        }, [dark]);
+        const {dark, setDark} = useTheme();
        
         return(
                 <nav>
-                        <div className="
-                                flex
-                                [background:var(--gradient)] 
-                                py-[1rem] 
-                                px-[2rem]
-                                border-[var(--border-card)]
-                                [border-top: 1px solid var(--highlight))]
-                                rounded-[1rem]
-                                mt-[1rem]
-                                shadow-[var(--shadow)]
-                                shadow-lg
-                                overflow-hidden
-                        ">
+                        <Container styleName='flex px-6 overflow-hidden'>
                                 <div className="my-auto mr-auto">
                                         <h1 className="
                                                 text-lg
@@ -151,17 +146,15 @@ function Navbar()
                                                 transition
                                                 duration-300
                                                 text-nowrap
-                                        "><Link className='cursor-default' to="/">محمد شيخ</Link></h1>
+                                        "><Link className='cursor-default' to="/">{navBar.title}</Link></h1>
                                 </div>
-
                                 <div className='my-auto'>
                                         <ThemeButton state={dark} setState={setDark}/>
                                 </div>
-
                                 <div className='my-auto'>
-                                        <NavOverlay/>
-                                </div>                        
-                        </div>
+                                        <NavOverlay dark={dark}/>
+                                </div>         
+                        </Container>
                 </nav>
         );
 }

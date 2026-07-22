@@ -1,9 +1,9 @@
 import '../../index.css'
 
-function ClearContainer({children})
+function ClearContainer({children, styleName=""})
 {
         return(
-                <div className='w-full mt-4'>
+                <div className={`w-full mt-4 ${styleName}`}>
                         {children}
                 </div>
         );

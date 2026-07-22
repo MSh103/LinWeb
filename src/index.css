@@ -45,7 +45,7 @@
   --grad-hover-start: var(--bg);
   --grad-hover-end: var(--bg-light);
   
-  --gradient: linear-gradient(0deg, var(--grad-start) 97%, var(--grad-end));
+  --gradient: linear-gradient(0deg, var(--grad-start) 50%, var(--grad-end));
   --gradient-hover: linear-gradient(0deg, var(--grad-hover-start), var(--grad-hover-end));
 }
 

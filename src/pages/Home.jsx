@@ -1,6 +1,5 @@
 import '../index.css'
 
-import Card from '../components/common/Card';
 import ClearCard from '../components/common/ClearCard';
 
 import SectionTitle from '../components/common/SectionTitle';
@@ -23,11 +22,11 @@ function Home()
 
         return(
                 <>
-                        <div className='flex flex-wrap flex-row gap-[6%] md:flex-row'>
-                                <Card>
+                        <div className='flex flex-wrap flex-col gap-[6%] md:flex-row justify-center'>
+                                <Container styleName='md:w-[47%]'>
                                         <SectionTitle title={home.about.title}/>
                                         <Paragraphs paragraphs={home.about.paragraphs}/>
-                                </Card>
+                                </Container>
                                 <ClearCard>
                                         <SectionTitle title={home.hero.title}/>
                                         <img src={home.hero.imgSrc} alt="M Sh's Profile Picture" className="
@@ -35,10 +34,12 @@ function Home()
                                         "/>
                                 </ClearCard>
                         </div>
-                        <div className='w-full overflow-hidden bg-[var(--bg)] py-4 px-8 rounded-lg mt-8 shadow-lg shadow-[var(--shadow)]'>
+                        {/* <div className='w-full overflow-hidden bg-[var(--bg)] py-4 px-8 rounded-lg mt-8 shadow-lg shadow-[var(--shadow)] [border-top:1px_solid_var(--highlight)]'> */}
+                        <Container styleName='my-8'>
                                 <h1 className='font-bold'>{home.skills.title}</h1>
                                 <SkillsScrollContainer skills={skills}/>
-                        </div>
+                        {/* </div> */}
+                        </Container>
                 </>
         );
 }

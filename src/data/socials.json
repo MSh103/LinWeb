@@ -9,35 +9,40 @@
                         "href": "https://github.com/MSh103/",           
                         "isImg": false,
                         "icon": "fa-brands fa-github",
-                        "color": "text-black"
+                        "color": "text-black",
+                        "darkColor": "text-slate-50"
                 },
                 {
                         "name": "Linkedin",
                         "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249",           
                         "isImg": false,
                         "icon": "fa-brands fa-linkedin",
-                        "color": "text-blue-900"
+                        "color": "text-blue-900",
+                        "darkColor": "text-blue-600"
                 },
                 {
                         "name": "TikTok",
                         "href": "https://www.tiktok.com/@2006expedition",           
                         "isImg": false,
                         "icon": "fa-brands fa-tiktok",
-                        "color": "text-black"
+                        "color": "text-black",
+                        "darkColor": "text-slate-50"
                 },
                 {
                         "name": "YouTube",
                         "href": "https://youtube.linweb.dev",           
                         "isImg": false,
                         "icon": "fa-brands fa-youtube",
-                        "color": "text-red-600"
+                        "color": "text-red-600",
+                        "darkColor": "text-red-600"
                 },
                 {
                         "name": "BeamNG Forums",
                         "href": "https://beamng.com/members/msh508921.454962/",
                         "isImg": true,
                         "icon": "https://cdn.brandfetch.io/idud6Efbq4/w/48/h/44/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
-                        "color": ""
+                        "color": "",
+                        "darkColor": ""
                 }
 
         ]
