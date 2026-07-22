@@ -8,7 +8,7 @@ function Container({children, styleName=""})
                         border-[var(--border-card)] 
                         [background:var(--gradient)] 
                         mt-4 
-                        rounded-lg 
+                        rounded-2xl
                         px-4 
                         md:px-8 
                         py-4 
