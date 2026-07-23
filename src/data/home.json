@@ -1,39 +1,80 @@
 {
-        "about": {
-                "title": "Welcome to LinWeb",
-                "paragraphs": [
-                        "My name is Mohammad Shaikh (Also known as M Sh). I'm a self-taught hobby programmer with a passion for coding. While I'm not enrolled in any university, I enjoy learning and building projects. I'm currently diving deep into C++ for game development, but I also work as a full-stack developer for both games and websites.",
-                        "",
-                        "If you have any feedback, suggestions, or ideas that could help improve my projects or tutorials in game development, app development, or anything related—feel free to reach out."
-                ]
+        "en": {
+                "about": {
+                        "title": "Welcome to LinWeb",
+                        "paragraphs": [
+                                "My name is Mohammad Shaikh (Also known as M Sh). I'm a self-taught hobby programmer with a passion for coding. While I'm not enrolled in any university, I enjoy learning and building projects. I'm currently diving deep into C++ for game development, but I also work as a full-stack developer for both games and websites.",
+                                "",
+                                "If you have any feedback, suggestions, or ideas that could help improve my projects or tutorials in game development, app development, or anything related—feel free to reach out."
+                        ]
+                },
+                "hero": {
+                        "title": "FullStack | Game | Web Developer",
+                        "imgSrc": "assets/icons/maskable-icon.png",
+                        "alt": "M Sh's Profile Picture"
+                },
+                "skills": {
+                        "title": "My Skills",
+                        "skills": [
+                                {"name": "Arduino",             "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"},
+                                {"name": "C++",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
+                                {"name": "Cloudflare",          "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg"},
+                                {"name": "CSS",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
+                                {"name": "Docker",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"},
+                                {"name": "Git",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
+                                {"name": "Github",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"},
+                                {"name": "HTML",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
+                                {"name": "Java",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"},
+                                {"name": "JS",                  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
+                                {"name": "React",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
+                                {"name": "Tailwind",            "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"},
+                                {"name": "JSON",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"},
+                                {"name": "Linux",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
+                                {"name": "Lua",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"},
+                                {"name": "Visual Studio",       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"},
+                                {"name": "Visual Studio Code",  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"},
+                                {"name": "Raspberry Pi 5",      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"},
+                                {"name": "OpenGL",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg"}
+                        ]
+                }
         },
-        "hero": {
-                "title": "FullStack | Game | Web Developer",
-                "imgSrc": "assets/icons/maskable-icon.png",
-                "alt": "M Sh's Profile Picture"
-        },
-        "skills": {
-                "title": "My Skills",
-                "skills": [
-                        {"name": "Arduino",             "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"},
-                        {"name": "C++",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
-                        {"name": "Cloudflare",          "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg"},
-                        {"name": "CSS",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
-                        {"name": "Docker",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"},
-                        {"name": "Git",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
-                        {"name": "Github",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"},
-                        {"name": "HTML",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
-                        {"name": "Java",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"},
-                        {"name": "JS",                  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
-                        {"name": "React",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
-                        {"name": "Tailwind",            "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"},
-                        {"name": "JSON",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"},
-                        {"name": "Linux",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
-                        {"name": "Lua",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"},
-                        {"name": "Visual Studio",       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"},
-                        {"name": "Visual Studio Code",  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"},
-                        {"name": "Raspberry Pi 5",      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"},
-                        {"name": "OpenGL",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg"}
-                ]
+        "ar": {
+                "about": {
+                        "title": "حياك اللّه ب LinWeb",
+                        "paragraphs": [
+                                "السلام عليكم، انا اسمي محمد شيخ، طالب ثانوي، هاوي برمجة أتعلّمت بنفسي. عندي شغف كبير بالبرمجة وبناء المشاريع. حالياً جالس أتعلم ++C في مجال تطوير الألعاب، وأشتغل أيضاً كمطوّر فل ستاك في برمجة الألعاب والمواقع.",
+                                "",
+                                "إذا عندك أي اقتراحات أو أفكار ممكن تساعدني في برمجة الألعاب، التطبيقات، أو في مجال مشابه — تواصل معي على."
+                        ]
+                },
+                "hero": {
+                        "title": "FullStack | Game | Web Developer",
+                        "imgSrc": "assets/icons/maskable-icon.png",
+                        "alt": "M Sh's Profile Picture"
+                },
+                "skills": {
+                        "title": "مهاراتي",
+                        "skills": [
+                                {"name": "Arduino",             "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg"},
+                                {"name": "C++",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"},
+                                {"name": "Cloudflare",          "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg"},
+                                {"name": "CSS",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"},
+                                {"name": "Docker",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"},
+                                {"name": "Git",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"},
+                                {"name": "Github",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"},
+                                {"name": "HTML",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"},
+                                {"name": "Java",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"},
+                                {"name": "JS",                  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
+                                {"name": "React",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},
+                                {"name": "Tailwind",            "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"},
+                                {"name": "JSON",                "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"},
+                                {"name": "Linux",               "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
+                                {"name": "Lua",                 "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg"},
+                                {"name": "Visual Studio",       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"},
+                                {"name": "Visual Studio Code",  "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"},
+                                {"name": "Raspberry Pi 5",      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg"},
+                                {"name": "OpenGL",              "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg"}
+                        ]
+                }
         }
 }

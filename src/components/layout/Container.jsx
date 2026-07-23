@@ -1,11 +1,11 @@
 import '../../index.css'
 
-function Container({children, styleName=""})
+function Container({children, styleName="", className="", style={}})
 {
         return(
                 <div className={`
                         w-full 
-                        border-[var(--border-card)] 
+                        border-(--border-card) 
                         [background:var(--gradient)] 
                         mt-4 
                         rounded-2xl
@@ -13,10 +13,10 @@ function Container({children, styleName=""})
                         md:px-8 
                         py-4 
                         md:py-6 
-                        shadow-lg 
-                        shadow-[var(--shadow)]
+                        shadow-lg
                         ${styleName}
-                `}>
+                        ${className}
+                `} style={style}>
                         {children}
                 </div>
         );

@@ -5,28 +5,32 @@ import { useTheme } from '../../hooks/useTheme';
 import '../../index.css'
 import navBar from '../../data/navbar.json'
 
+import Animate from '../../animations/Animate'
 
 import Container from './Container';
+import { useLanguage } from '../../hooks/useLanguage';
 
 function NavButton({href="/", title="Home", active=false, setOpen})
 {
 return(<>
                 {active ? 
                 <Link to={href} className="
-                        block text-2xl my-4 font-bold transition duration-300 text-[var(--secondary)] hover:text-[var(--text-muted)]
+                        block text-2xl my-4 font-bold transition duration-300 text-(--secondary) hover:text-(--text-muted)
                 " onClick={() => setOpen(false)}>{title}</Link> :                 
                 <Link to={href} className="
-                        block text-2xl my-4 font-normal transition duration-300 text-[var(--text)] hover:text-[var(--secondary)]
+                        block text-2xl my-4 font-normal transition duration-300 text-(--text) hover:text-(--secondary)
                 " onClick={() => setOpen(false)}>{title}</Link>}
         </>);
 }
 
-function ThemeButton({ state = false, setState })
+function ThemeButton()
 {
+        const {dark, setDark} = useTheme();
+
         return(
-                <button onClick={() => {setState(!state)}} className="
-                        text-[var(--primary)]
-                        hover:text-[var(--text)] 
+                <button onClick={() => {setDark(!dark)}} className="
+                        text-(--primary)
+                        hover:text-(--text) 
                         w-6
                         h-6
                         p-0
@@ -36,6 +40,27 @@ function ThemeButton({ state = false, setState })
                 ">      
                         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v10"></path><path d="M18.4 6.6a9 9 0 1  1-12.77.04"></path>
                         </svg>
+                </button>
+        );
+}
+
+function LanguageButton()
+{
+        const {language, setLanguage} = useLanguage();
+        
+        return(
+                <button onClick={() => {language === "ar" ? setLanguage("en") : setLanguage("ar")}} className="
+                        text-(--primary)
+                        hover:text-(--text) 
+                        max-w-8
+                        w-auto
+                        h-6
+                        p-0
+                        transition
+                        duration-300
+                        mx-0
+                ">      
+                        <img className='w-full h-full' src={navBar[language].icon}/>
                 </button>
         );
 }
@@ -74,10 +99,12 @@ function Burger({ open = false })
         );
 }
 
-function NavOverlay({dark=false})
+function NavOverlay()
 {
         const location = useLocation();
         const [isOpen, setIsOpen] = useState(false);
+        const {language} = useLanguage();
+        const {dark} = useTheme();
 
         useEffect(() => {
                 if (isOpen) {
@@ -108,8 +135,8 @@ function NavOverlay({dark=false})
                         </button>
 
                         <div
-                                className={`fixed inset-0 z-40 flex flex-col items-baseline justify-items-start transition-opacity duration-300 ease-in-out ${
-                                        isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                                className={`fixed inset-0 z-40 flex flex-col items-baseline justify-items-start transition-all duration-300 ease-in-out ${
+                                        isOpen ? 'opacity-100 pointer-events-auto translate-x-0' : 'opacity-0 -translate-x-5 pointer-events-none'
                                 }`}
                                 style={{ background: 'var(--bg)' }}
                         >
@@ -117,14 +144,14 @@ function NavOverlay({dark=false})
                                 <div className='
                                         my-8 mx-2 py-8 px-8 md:mx-32 md:my-4
                                 '>
-                                        <NavButton setOpen={setIsOpen} href="/" title='Home' active={location.pathname === '/' ? true : false}/>
-                                        <NavButton setOpen={setIsOpen} href="/Socials" title='Socials' active={location.pathname === '/Socials' ? true : false}/>
-                                        <NavButton setOpen={setIsOpen} href="/Projects" title='Projects' active={location.pathname === '/Projects' ? true : false}/>
+                                        <NavButton setOpen={setIsOpen} href="/"         title={navBar[language].links[0]} active={location.pathname === '/' ? true : false}/>
+                                        <NavButton setOpen={setIsOpen} href="/Socials"  title={navBar[language].links[1]} active={location.pathname === '/Socials' ? true : false}/>
+                                        <NavButton setOpen={setIsOpen} href="/Projects" title={navBar[language].links[2]} active={location.pathname === '/Projects' ? true : false}/>
                                 </div>
                                 <div className='mt-auto mb-10 px-6'>
                                         {navBar.buttons.map((button, index) => {return(
                                                 <a href={button.href} key={index} className='p-0 mx-1'>
-                                                        <i className={`${button.icon} hover:text-[var(--text-muted)] font-extrabold ${dark ? button.darkColor : button.color}`}></i>
+                                                        <i className={`${button.icon} hover:text-(--text-muted) font-extrabold ${dark ? button.darkColor : button.color}`}></i>
                                                 </a>
                                         );})}
                                 </div>
@@ -136,19 +163,18 @@ function NavOverlay({dark=false})
 function Navbar()
 {
         const location = useLocation();
-        const {dark, setDark} = useTheme();
        
         return(
                 <nav>
-                        <Container styleName='flex px-8! overflow-hidden border-t border-[var(--highlight)]'>
+                        <Container styleName='flex px-3! md:px-8! overflow-hidden border-t border-[var(--highlight)]'>
                                 <div className="my-auto mr-auto">
                                         <h1 className="
                                                 text-lg
                                                 md:text-2xl
                                                 my-auto
                                                 font-saudi
-                                                text-[var(--text)]
-                                                hover:text-[var(--bg-dark)]
+                                                text-(--text)
+                                                hover:text-(--bg-dark)
                                                 transition
                                                 duration-300
                                                 text-nowrap
@@ -156,10 +182,13 @@ function Navbar()
                                         "><Link className='cursor-default' to="/">{navBar.title}</Link></h1>
                                 </div>
                                 <div className='my-auto'>
-                                        <ThemeButton state={dark} setState={setDark}/>
+                                        <LanguageButton/>
                                 </div>
                                 <div className='my-auto'>
-                                        <NavOverlay dark={dark}/>
+                                        <ThemeButton/>
+                                </div>
+                                <div className='my-auto'>
+                                        <NavOverlay/>
                                 </div>         
                         </Container>
                 </nav>

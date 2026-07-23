@@ -19,5 +19,13 @@
                         "color": "text-blue-900",
                         "darkColor": "text-blue-900"
                 }
-        ]
+        ],
+        "en": {
+                "icon": "/assets/icons/saudiFlag.svg",
+                "links": ["Home", "Socials", "Projects"]
+        },
+        "ar": {
+                "icon": "/assets/icons/americanFlag.svg",
+                "links": ["الرئيسية", "التواصل الاجتماعي", "المشاريع"]
+        }
 }

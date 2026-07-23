@@ -9,37 +9,46 @@ import Container from '../components/layout/Container';
 
 import SkillsScrollContainer from '../components/common/SkillsCard';
 
+import Animate from '../animations/Animate';
+
 import home from '../data/home.json'
 import { useEffect, useState } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
 
 function Home()
 {
         const [skills, setSkills] = useState([]);
+        const {language} = useLanguage();
 
         useEffect(()=>{
-                setSkills(home.skills.skills.sort((a,b) => a.name.localeCompare(b.name)));
+                setSkills(home[language].skills.skills.sort((a,b) => a.name.localeCompare(b.name)));
         }, []);
 
         return(
                 <>
                         <div className='flex flex-wrap flex-col gap-[6%] md:flex-row justify-center'>
-                                <Container styleName='md:w-[47%]'>
-                                        <SectionTitle title={home.about.title}/>
-                                        <Paragraphs paragraphs={home.about.paragraphs}/>
-                                </Container>
+                                <Animate delay='100ms' duration='450ms'>
+                                        <Container styleName='md:w-[47%]'>
+                                                <SectionTitle title={home[language].about.title}/>
+                                                <Paragraphs paragraphs={home[language].about.paragraphs}/>
+                                        </Container>
+                                </Animate>
+                                <Animate delay='180ms' duration='450ms'>
                                 <ClearCard styleName='mt-2!'>
-                                        <SectionTitle title={home.hero.title}/>
-                                        <img src={home.hero.imgSrc} alt="M Sh's Profile Picture" className="
+                                        <SectionTitle title={home[language].hero.title}/>
+                                        <img src={home[language].hero.imgSrc} alt="M Sh's Profile Picture" className="
                                                 rounded-full w-1/2 md:w-5/6 mx-auto mt-5
                                         "/>
                                 </ClearCard>
+                                </Animate>
                         </div>
-                        {/* <div className='w-full overflow-hidden bg-[var(--bg)] py-4 px-8 rounded-lg mt-8 shadow-lg shadow-[var(--shadow)] [border-top:1px_solid_var(--highlight)]'> */}
+                        
+                        <Animate delay='300ms' duration='450ms'>
                         <Container styleName='my-10!'>
-                                <h1 className='font-bold'>{home.skills.title}</h1>
+                                <h1 className='font-bold text-content text-(--text)'>{home[language].skills.title}</h1>
                                 <SkillsScrollContainer skills={skills}/>
-                        {/* </div> */}
                         </Container>
+                        </Animate>
                 </>
         );
 }

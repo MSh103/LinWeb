@@ -1,0 +1,38 @@
+@keyframes fadeUp {
+        from {
+                opacity: 0;
+                transform: translateY(20px);
+        }
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+.fade-up {
+        opacity: 0;
+        animation-name: fadeUp;
+        animation-duration: var(--animation-duration, 400ms);
+        animation-delay: var(--animation-delay, 0ms);
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+}
+
+@keyframes opacityFade {
+        from {
+                opacity: 0;
+        }
+
+        to {
+                opacity: 1;
+        }
+}
+
+.opacity-fade {
+        opacity: 0;
+        animation-name: opacityFade;
+        animation-duration: var(--animation-duration, 400ms);
+        animation-delay: var(--animation-delay, 0ms);
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+}

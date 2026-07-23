@@ -9,7 +9,7 @@ function Paragraphs({paragraphs=[]})
                         <div className='py-2'>
                                 {paragraphs.map((p, i) => {return(
                                         <React.Fragment key={i}>
-                                                <p className='text-xs md:text-sm'>{p}</p><br />
+                                                <p className='text-xs md:text-sm text-content'>{p}</p><br />
                                         </React.Fragment>
                                 );})}
                         </div>

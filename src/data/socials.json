@@ -1,49 +1,101 @@
 {
-        "title": "My Socials",
-        "paragraphs": [
-                "You can find me on these platforms whenever I’m active. I don’t post often, but I do check in from time to time — whether to share a project, explore ideas, or just connect with others in the field. Feel free to follow, reach out, or simply stay in touch."
-        ],
-        "links": [
-                {
-                        "name": "Github",
-                        "href": "https://github.com/MSh103/",           
-                        "isImg": false,
-                        "icon": "fa-brands fa-github",
-                        "color": "text-black",
-                        "darkColor": "text-slate-50"
-                },
-                {
-                        "name": "Linkedin",
-                        "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249",           
-                        "isImg": false,
-                        "icon": "fa-brands fa-linkedin-in",
-                        "color": "text-blue-900",
-                        "darkColor": "text-blue-600"
-                },
-                {
-                        "name": "TikTok",
-                        "href": "https://www.tiktok.com/@2006expedition",           
-                        "isImg": false,
-                        "icon": "fa-brands fa-tiktok",
-                        "color": "text-black",
-                        "darkColor": "text-slate-50"
-                },
-                {
-                        "name": "YouTube",
-                        "href": "https://youtube.linweb.dev",           
-                        "isImg": false,
-                        "icon": "fa-brands fa-youtube",
-                        "color": "text-red-600",
-                        "darkColor": "text-red-600"
-                },
-                {
-                        "name": "BeamNG Forums",
-                        "href": "https://beamng.com/members/msh508921.454962/",
-                        "isImg": true,
-                        "icon": "https://cdn.brandfetch.io/idud6Efbq4/w/48/h/44/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
-                        "color": "",
-                        "darkColor": ""
-                }
+        "en": {
+                "title": "My Socials",
+                "paragraphs": [
+                        "You can find me on these platforms whenever I’m active. I don’t post often, but I do check in from time to time — whether to share a project, explore ideas, or just connect with others in the field. Feel free to follow, reach out, or simply stay in touch."
+                ],
+                "links": [
+                        {
+                                "name": "Github",
+                                "href": "https://github.com/MSh103/",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-github",
+                                "color": "text-black",
+                                "darkColor": "text-slate-50"
+                        },
+                        {
+                                "name": "Linkedin",
+                                "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-linkedin-in",
+                                "color": "text-blue-900",
+                                "darkColor": "text-blue-600"
+                        },
+                        {
+                                "name": "TikTok",
+                                "href": "https://www.tiktok.com/@2006expedition",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-tiktok",
+                                "color": "text-black",
+                                "darkColor": "text-slate-50"
+                        },
+                        {
+                                "name": "YouTube",
+                                "href": "https://youtube.linweb.dev",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-youtube",
+                                "color": "text-red-600",
+                                "darkColor": "text-red-600"
+                        },
+                        {
+                                "name": "BeamNG Forums",
+                                "href": "https://beamng.com/members/msh508921.454962/",
+                                "isImg": true,
+                                "icon": "https://cdn.brandfetch.io/idud6Efbq4/w/48/h/44/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+                                "color": "",
+                                "darkColor": ""
+                        }
 
-        ]
+                ]
+        },
+
+        "ar": {
+                "title": "حساباتي",
+                "paragraphs": [
+                        "تقدر تلاقيني على هذي المنصات وقت ما أكون متفاعل. ما أنشر كثير، لكن أرجع من وقت لوقت. لا تتردد تتابعني، ترسل لي، أو تبقى على تواصل."
+                ],
+                "links": [
+                        {
+                                "name": "Github",
+                                "href": "https://github.com/MSh103/",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-github",
+                                "color": "text-black",
+                                "darkColor": "text-slate-50"
+                        },
+                        {
+                                "name": "Linkedin",
+                                "href": "https://www.linkedin.com/in/mohammad-shaikh-8a72a1249",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-linkedin-in",
+                                "color": "text-blue-900",
+                                "darkColor": "text-blue-600"
+                        },
+                        {
+                                "name": "تيك توك",
+                                "href": "https://www.tiktok.com/@2006expedition",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-tiktok",
+                                "color": "text-black",
+                                "darkColor": "text-slate-50"
+                        },
+                        {
+                                "name": "يوتيوب",
+                                "href": "https://youtube.linweb.dev",           
+                                "isImg": false,
+                                "icon": "fa-brands fa-youtube",
+                                "color": "text-red-600",
+                                "darkColor": "text-red-600"
+                        },
+                        {
+                                "name": "BeamNG Forums",
+                                "href": "https://beamng.com/members/msh508921.454962/",
+                                "isImg": true,
+                                "icon": "https://cdn.brandfetch.io/idud6Efbq4/w/48/h/44/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
+                                "color": "",
+                                "darkColor": ""
+                        }
+
+                ]
+        }
 }

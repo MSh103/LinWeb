@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   /* hsl (fallback color) */
   --bg-dark: hsl(224 0% 1%);
@@ -20,7 +18,7 @@
   --info: hsl(217 28% 65%);
   /* oklch */
   --bg-dark: oklch(0.1 0 40);
-  --bg: oklch(0.15 0 40);
+  --bg: rgb(11, 11, 11);
   --bg-light: oklch(0.2 0 40);
   --text: oklch(0.96 0 40);
   --text-muted: oklch(0.76 0 40);
@@ -34,10 +32,6 @@
   --warning: oklch(0.7 0.05 100);
   --success: oklch(0.7 0.05 160);
   --info: oklch(0.7 0.05 260);
-
-  --shadow:
-    -6px -6px 12px rgba(255,255,255,0.025),
-     6px  6px 12px rgba(0,0,0,0.35);
   
   --grad-start: var(--bg);
   --grad-end: var(--bg-light);
@@ -82,10 +76,6 @@
   --success: oklch(0.5 0.05 160);
   --info: oklch(0.5 0.05 260);
 
-  --shadow:
-    -8px -8px 16px rgba(255,255,255,0.9),
-     8px  8px 16px rgba(0,0,0,0.12);
-
   --grad-start: var(--bg);
   --grad-end: var(--bg-light);
 
@@ -116,6 +106,17 @@
     font-variant: normal;
 }
 
+html[lang="ar"] {
+  --font-main: "Saudi", sans-serif;
+  --text-direction: rtl;
+  --line-height: 2.2em;
+}
+
+html[lang="en"] {
+  --font-main: 'Courier New', Courier, monospace;
+  --text-direction: ltr;
+  --line-height: 1.5em;
+}
 
 @keyframes scrollSkills {
     from {
@@ -128,24 +129,40 @@
 }
 
 @theme {
-    --animate-scroll-skills: scrollSkills 30s linear infinite;
-}
-
-@theme {
+  --animate-scroll-skills: scrollSkills 30s linear infinite;
   --font-saudi: "Saudi", sans-serif
 }
 
 
 @layer base {
   body {
-    @apply bg-[var(--bg-dark)] text-[var(--text-muted)]; /* Sets background color and text color globally */
+    @apply bg-(--bg-dark) text-(--text-muted); /* Sets background color and text color globally */
   }
 }
 
 body {
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
 }
+
+html[lang="en"], Link {
+  font-family: "Montserrat", sans-serif;
+}
+
+html[lang="ar"], Link {
+  font-family: "Saudi", sans-serif;
+}
+
+.footer {
+  font-family: "Saudi", sans-serif !important;
+}
+
+.text-content
+{
+  font-family: var(--font-main);
+  direction: var(--text-direction);
+  line-height: var(--line-height);
+}
+
 
 @media only screen and (max-width: 3440px) {
   body {
