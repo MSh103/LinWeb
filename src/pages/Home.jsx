@@ -11,18 +11,14 @@ import SkillsScrollContainer from '../components/common/SkillsCard';
 
 import Animate from '../animations/Animate';
 
-import home from '../data/home.json'
-import { useEffect, useState } from 'react';
+import home from '../data/home.json';
 import { useLanguage } from '../hooks/useLanguage';
 
 function Home()
 {
-        const [skills, setSkills] = useState([]);
         const {language} = useLanguage();
+        const skills = [...home[language].skills.skills].sort((a,b) => a.name.localeCompare(b.name));
 
-        useEffect(()=>{
-                setSkills(home[language].skills.skills.sort((a,b) => a.name.localeCompare(b.name)));
-        }, []);
 
         return(
                 <>

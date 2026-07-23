@@ -5,6 +5,8 @@ import { useTheme } from '../../hooks/useTheme';
 
 import Animate from '../../animations/Animate';
 
+import packageJson from '../../../package.json';
+
 function Footer()
 {
         const {dark} = useTheme();
@@ -18,7 +20,7 @@ function Footer()
                                 <div className='w-4/6 md:w-1/2 lg:w-1/4 text-center my-auto'>
                                         <h1 className='text-[0.6rem] md:text-xs font-extrabold footer'>{footer.copyright}</h1>
                                         <hr />
-                                        <h1 className='text-[0.6rem] md:text-xs font-extrabold footer'>Version {__APP_VERSION__}</h1>
+                                        <h1 className='text-[0.6rem] md:text-xs font-extrabold footer'>Version {packageJson.version}</h1>
                                 </div>
                                 <div className='ml-auto flex text-xl my-auto'>
                                         {footer.buttons.map((button, index) => {return(

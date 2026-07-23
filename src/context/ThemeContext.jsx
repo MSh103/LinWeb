@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from "react";
+import {createContext, useEffect, useState} from "react";
 
 export const ThemeContext = createContext();
 
@@ -10,16 +10,21 @@ export function ThemeProvider({children})
                 if(savedTheme !== null)
                         return savedTheme === "dark";
 
+                return window.matchMedia("(prefers-color-scheme: dark)");
+        }); 
+
+        useEffect(() => {
                 const media = window.matchMedia("(prefers-color-scheme: dark)");
 
                 const handler = (e) => {
-                        setDark(e.matches);
+                        if(localStorage.getItem("theme") === null)
+                                setDark(e.matches);
                 };
 
                 media.addEventListener("change", handler);
 
                 return () => media.removeEventListener("change", handler);
-        }); 
+        }, []);
 
         useEffect(()=>{
                 document.documentElement.classList.toggle("light", !dark);

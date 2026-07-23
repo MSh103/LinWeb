@@ -1,11 +1,8 @@
-import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../hooks/useTheme';
 import '../../index.css'
 import navBar from '../../data/navbar.json'
-
-import Animate from '../../animations/Animate'
 
 import Container from './Container';
 import { useLanguage } from '../../hooks/useLanguage';
@@ -101,7 +98,6 @@ function Burger({ open = false })
 
 function NavOverlay()
 {
-        const location = useLocation();
         const [isOpen, setIsOpen] = useState(false);
         const {language} = useLanguage();
         const {dark} = useTheme();
@@ -162,8 +158,6 @@ function NavOverlay()
 
 function Navbar()
 {
-        const location = useLocation();
-       
         return(
                 <nav>
                         <Container styleName='flex px-3! md:px-8! overflow-hidden border-t border-[var(--highlight)]'>
